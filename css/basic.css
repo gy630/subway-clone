@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Sans+KR:wght@100..900&display=swap');
 
 :root { 
   --yellow:#FFC20D;
@@ -130,19 +130,26 @@ header {
 }
 
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom:var(--swiper-pagination-bottom,35px);
-  left:0;
-  width: 100%; }
+.swiper-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal, 
+.swiper-pagination-custom, 
+.swiper-pagination-fraction {
+  bottom: 40px;
+  left:1120px;
+  width: auto;
+}
 
-  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  .swiper-horizontal>.swiper-pagination-bullets 
+  .swiper-pagination-bullet, 
+  .swiper-pagination-horizontal.swiper-pagination-bullets 
+  .swiper-pagination-bullet {
     margin:0 var(--swiper-pagination-bullet-horizontal-gap,5px)
   }
 
-.swiper-pagination { 
-  border:1px solid red;
-}
-
+.swiper-container { width: 100%; height: 100%; }
+.swiper-slide { text-align: center; font-size: 18px; background: #fff; display: flex; justify-content: center; align-items: center; }
+.swiper-pagination-bullet { width: 10px; height: 10px; background: white; border: 1px solid white; opacity: 1; }
+.swiper-pagination-bullet-active { width: 30px; transition: width .5s; border-radius: 5px; background: var(--yellow); border: 1px solid transparent; }
 
 
 
@@ -181,11 +188,11 @@ header {
 
     
 h2 { 
-  font-family: "Nerko One", sans-serif; 
+  font-family: "Funnel Sans", sans-serif; 
   font-weight: 700; 
   background: url('../img/bul_tit.png') no-repeat; 
   line-height: 50px; 
-  padding:15px 0 0 35px }
+  padding:15px 0 0 35px; }
 li.select a { color:var(--green); font-weight: 700; }
 
 /* #container  -menu */
@@ -194,7 +201,7 @@ li.select a { color:var(--green); font-weight: 700; }
   position: relative; 
   width: 1170px; margin: auto; 
 }
-.menu .hd h2 { font-size: 42px; letter-spacing: 1px; }
+.menu .hd h2 { font-size: 42px; letter-spacing: -1px; }
 .menu .hd .tab { position: absolute; right:0; top:40px; }
   .tab { }
   .tab ul { overflow: hidden; }
@@ -314,7 +321,7 @@ li.select a { color:var(--green); font-weight: 700; }
 
   .whats_new_in h2 { 
     font-size: 32px; 
-    letter-spacing: 1px;
+    letter-spacing: -1px;
     padding:17px 0 0 25px; 
     min-height: 70px;}
   

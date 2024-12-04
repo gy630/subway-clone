@@ -52,10 +52,11 @@
   overflow:hidden; 
 }
 .sub_visual h2 { 
+  font-family: "Funnel Sans", sans-serif;
   background: none; 
   line-height:1;
   font-size: 76px;
-  letter-spacing:4px;
+  letter-spacing:-1px;
   padding:116px 0 0 8px;
   animation: toUp 0.8s ease-out;
 }
@@ -173,8 +174,9 @@
 }
 .pd_list .cal {
   color:var(--yellow);
-  font-family:"Nerko One";
-  font-size:22px;
+  font-family: "Funnel Sans", sans-serif;
+  font-size:20px; font-weight: bold;
+  letter-spacing: -1px;
   top:0;
 }
 
