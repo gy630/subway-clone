@@ -25,7 +25,7 @@ header {
 }
 .header_in { 
   width: 1170px; margin: auto; 
-  height: 165px; position:relative;
+  height: 100px; position:relative;
   border-bottom:1px solid var(--lightgray); }
 
   .logo { 
@@ -38,7 +38,7 @@ header {
   }
 
   #gnb { 
-    position: absolute; bottom:0; left:0; 
+    position: relative; bottom:0; left:0; 
     width: 100%;
     text-align:center; }
   #gnb > ul { display:inline-block; }
@@ -74,13 +74,16 @@ header {
 
 /* -------------sub------------ */
 
+    .gnb_wrap { width: 100%; }
     .sub_menu { 
-      visibility: hidden;
       opacity: 0;
-      position:absolute; z-index:200; 
+      visibility: hidden;
+      top:175px;
+      position:absolute; z-index:100; 
       width: 100%; background: white; 
       padding: 20px 0; 
-      transition:0.3s
+      transition:0.3s;
+      border-top:1px solid lightgray;
     }
     .sub_in {  }
     .sub_in > ul { 
@@ -101,22 +104,47 @@ header {
     }
 
 
-    /* ----js 사용 전 임시----- */
     .sub_in ul.depth2 li a:hover {
       color:var(--green);
       text-decoration:underline;
     }
 
-    .header_in:hover + .sub { opacity:1; visibility: visible; }
+
+    header.on .sub_menu {
+      opacity: 1;
+      visibility: visible;
+      top:175px;
+    }
     
-
-
 
   /* ------------container------------- */
 #container { width: 100%; }
 
-.main_slider { width: 100%; height: auto;}
-.main_slider .swiper-slide img { width: 100%; height: 100%; object-fit: cover;}
+.main_slider {
+  width: 100%; height: 440px;
+}
+.main_slider .swiper-slide img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+}
+
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom:var(--swiper-pagination-bottom,35px);
+  left:0;
+  width: 100%; }
+
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin:0 var(--swiper-pagination-bullet-horizontal-gap,5px)
+  }
+
+.swiper-pagination { 
+  border:1px solid red;
+}
+
+
+
 
 .quicklink { 
   position: relative; top: -30px;
